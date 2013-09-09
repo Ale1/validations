@@ -1,0 +1,17 @@
+
+
+<h1><ul> <%if @msg  %>
+  <% @msg.each do |error| %>
+<li><font color='red'> <%= "#{error[1].join}" %> </font> </li>
+<%end%>
+  <% else %>
+  <%= "create a new form" %>
+  <% end %>
+</ul></h1>
+<form action="/events/create" method="POST">
+<input type="text" name="title" placeholder="title"></input>
+<input type="date" name="date" placeholder="date"></input>
+<input type="text" name="email" placeholder="email"></input>
+<input type="text" name="name" placeholder="organizer name"></input>
+<input type="submit"> submit</input>
+</form>
